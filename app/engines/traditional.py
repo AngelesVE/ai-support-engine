@@ -1,4 +1,4 @@
-"""Motor tradicional: IA simbólica basada en reglas (sin ningún modelo).
+"""Motor tradicional: motor basado en reglas (sin ningún modelo).
 
 Cómo decide:
 1. Normaliza el texto (minúsculas, sin acentos).

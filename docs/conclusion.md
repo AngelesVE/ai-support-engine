@@ -1,0 +1,3 @@
+# Conclusión
+
+En las 14 pruebas el motor por reglas acertó 10 (71.4 %) y el generativo con Ollama 9 (64.3 %), o sea que no ganó el que usa el modelo. Las reglas son instantáneas, siempre dan lo mismo y no se dejaron engañar por las dos inyecciones de prompt, pero fallan cuando una palabra confunde, como "exportar" en un error de texto cortado. El modelo qwen2.5:3b entendió mejor un mensaje ambiguo (caso 9), aunque tardó unos 10 segundos por solicitud y llegó a clasificar como BUG una vulnerabilidad de inyección SQL, algo grave. Ninguno detectó bien el ataque con SQL escrito en el mensaje (caso 14). Son pocos casos, así que los porcentajes solo son una referencia. En producción usaría las reglas primero y el modelo como apoyo, siempre con revisión humana en SECURITY.
